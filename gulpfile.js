@@ -1,7 +1,3 @@
-/*
-Xianqing Zou - CS554 - Lab1
-*/
-
 const gulp = require('gulp');
 const concatenate = require('gulp-concat');
 const cleanCSS = require('gulp-clean-css');
