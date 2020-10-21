@@ -1,0 +1,19 @@
+<p>{{user.firstName}}</p>
+<p>{{user.lastName}}</p>
+<p>{{user.email}}</p>
+<p>{{user.gender}}</p>
+User Rooms:
+<ul>
+    {{#each user.rooms}}
+    <li>{{this}}</li>
+    {{/each}}
+</ul>
+
+User Devices:
+<ul>
+    {{#each user.devices}}
+
+    <li>Device Name: {{deviceName}}, In {{room}}</li>
+
+    {{/each}}
+</ul>
