@@ -5,6 +5,7 @@ body {
 	-o-background-size: cover;
 	background-size: cover;
 	font-family: "Roboto", sans-serif;
+	/* cursor: url("../imgs/icons/cursor.png"), auto !important; */
 }
 
 .homeTitle {
@@ -31,4 +32,36 @@ body {
 
 .videoPlayerDiv {
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.card:hover {
+	background-color: #f50057;
+}
+
+.card:hover h5,
+.card:hover h6,
+.card:hover span {
+	color: white !important;
+}
+/* 
+.card:hover {
+	color: white !important;
+} */
+
+.notifTitle {
+	font-size: 20px;
+	font-weight: 400;
+	color: #455a64;
+}
+
+.notifSubTitle {
+	font-size: 18px;
+	font-weight: 300;
+	color: #7d8c93;
+}
+
+.running:before {
+	content: " \25CF";
+	font-size: 18px;
+	color: #4caf50;
 }
