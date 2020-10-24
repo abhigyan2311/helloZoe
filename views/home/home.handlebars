@@ -1,10 +1,9 @@
 <div class="mainHome">
     <h2 class="greetingTitle">Good Morning, Dave</h2>
-
     <div class="row mt-4">
         <div class="col">
             <h5 class="columnHeadings">TV</h5>
-            <div class="card">
+            <div class="card homeCards">
                 <div class="card-body">
                     <img src="./public/imgs/icons/hdmi.svg" height="40px" class="mb-1" />
                     <h5 class="card-title" style="display: inline;">HDMI 1</h5>
@@ -20,7 +19,7 @@
             </div>
             <div class="row mt-2">
                 <div class="col">
-                    <div class="card" style="height: 60px;">
+                    <div class="card homeCards" style="height: 60px;">
                         <div class="card-body" style="padding: 10px;">
                             <img src="./public/imgs/icons/hdmi.svg" height="40px" class="mb-1" />
                             <h5 class="card-title" style="display: inline;">HDMI 1</h5>
@@ -28,7 +27,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card" style="height: 60px;">
+                    <div class="card homeCards" style="height: 60px;">
                         <div class="card-body" style="padding: 10px;">
                             <img src="./public/imgs/icons/hdmi.svg" height="40px" class="mb-1" />
                             <h5 class="card-title" style="display: inline;">HDMI 2</h5>
@@ -38,7 +37,7 @@
             </div>
             <div class="row mt-2">
                 <div class="col">
-                    <div class="card" style="height: 60px;">
+                    <div class="card homeCards" style="height: 60px;">
                         <div class="card-body" style="padding: 10px;">
                             <img src="./public/imgs/icons/antenna.svg" height="40px" class="mb-1" />
                             <h5 class="card-title" style="display: inline;">Live TV</h5>
@@ -46,7 +45,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card" style="height: 60px;">
+                    <div class="card homeCards" style="height: 60px;">
                         <div class="card-body" style="padding: 10px;">
                             <img src="./public/imgs/icons/output.svg" height="40px" class="mb-1" />
                             <h5 class="card-title" style="display: inline;">AV</h5>
@@ -57,7 +56,7 @@
         </div>
         <div class="col">
             <h5 class="columnHeadings">DEVICES</h5>
-            <div class="card">
+            <div class="card homeCards">
                 <div class="card-body">
                     This is some text within a card body.
                 </div>
@@ -65,18 +64,20 @@
         </div>
         <div class="col">
             <h5 class="columnHeadings">NOTIFICATIONS</h5>
-            <div class="card">
+            <div class="card homeCards">
                 <div class="card-body">
                     <div class="row">
                         <div class="col">
-                            <img src="./public/imgs/icons/vacuum.svg" height="60px" />
+                            <img src="./public/imgs/icons/{{user.notifications.[0].icon}}" height="60px" />
                         </div>
                         <div class="col-6 pt-1">
                             <div class="row">
-                                <span class="notifTitle">Vacuum Cleaner</span>
+                                <span class="notifTitle">{{user.notifications.[0].name}}</span>
                             </div>
                             <div class="row">
+                                {{#if user.notifications.[0].status}}
                                 <span class="notifSubTitle">Running</span>
+                                {{/if}}
                                 <span class="running ml-2"></span>
                             </div>
                         </div>
@@ -90,11 +91,43 @@
                     <div class="row pl-3">
                         <div class="col">
                             <img src="./public/imgs/icons/timer.svg" height="30px" />
-                            <span class="notifSubTitle ml-2">00:35</span>
+                            <span class="notifSubTitle ml-2">{{user.notifications.[0].timeLeft}}</span>
                         </div>
                         <div class="col">
                             <img src="./public/imgs/icons/battery.svg" height="30px" />
-                            <span class="notifSubTitle ml-2">Mid</span>
+                            <span class="notifSubTitle ml-2">{{user.notifications.[0].battery}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card homeCards mt-2">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <img src="./public/imgs/icons/{{user.notifications.[1].icon}}" height="60px" />
+                        </div>
+                        <div class="col-6 pt-1">
+                            <div class="row">
+                                <span class="notifTitle">{{user.notifications.[1].name}}</span>
+                            </div>
+                            <div class="row">
+                                {{#if user.notifications.[1].status}}
+                                <span class="notifSubTitle">Running</span>
+                                {{/if}}
+                                <span class="running ml-2"></span>
+                            </div>
+                        </div>
+                        <div class="col-3 pt-2">
+                            <a href="">
+                                <img src="./public/imgs/icons/pause.svg" height="45px" />
+                            </a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row pl-3">
+                        <div class="col text-center">
+                            <img src="./public/imgs/icons/timer.svg" height="30px" />
+                            <span class="notifSubTitle ml-2">{{user.notifications.[1].timeLeft}}</span>
                         </div>
                     </div>
                 </div>

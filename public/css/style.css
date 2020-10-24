@@ -34,13 +34,13 @@ body {
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-.card:hover {
+.homeCards:hover {
 	background-color: #f50057;
 }
 
-.card:hover h5,
-.card:hover h6,
-.card:hover span {
+.homeCards:hover h5,
+.homeCards:hover h6,
+.homeCards:hover span {
 	color: white !important;
 }
 /* 
