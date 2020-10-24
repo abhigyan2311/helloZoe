@@ -2,27 +2,30 @@
 CS545 - Group Project - Smart Home
 */
 
-const express = require('express');
-const session = require('express-session');
+const express = require("express");
+const session = require("express-session");
 const app = express();
-const static = express.static(__dirname + '/public');
+const static = express.static(__dirname + "/public");
+const body = require("body-parser");
 
-const configRoutes = require('./routes');
-const exphbs = require('express-handlebars');
-const Handlebars = require('handlebars');
-const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-access');
+const configRoutes = require("./routes");
+const exphbs = require("express-handlebars");
+const Handlebars = require("handlebars");
+const {
+  allowInsecurePrototypeAccess,
+} = require("@handlebars/allow-prototype-access");
 
-app.use('/public', static);
+app.use("/public", static);
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(body.urlencoded({ extended: false }));
 
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
-app.set('view engine', 'handlebars');
-
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+app.use(body.urlencoded({ extended: true }));
 app.use(
   session({
-    name: 'AuthCookie',
-    secret: 'Build your smart home',
+    name: "AuthCookie",
+    secret: "Build your smart home",
     saveUninitialized: true,
     resave: false,
   })
@@ -40,11 +43,12 @@ app.use(async (req, res, next) => {
 });
 
 const handlebarsInst = exphbs.create({
-  defaultLayout: 'main',
+  defaultLayout: "main",
   // Specify helpers which are only registered on this instance.
   helpers: {
     asJSON: (obj, spacing) => {
-      if (typeof spacing === 'number') return new Handlebars.SafeString(JSON.stringify(obj, null, spacing));
+      if (typeof spacing === "number")
+        return new Handlebars.SafeString(JSON.stringify(obj, null, spacing));
 
       return new Handlebars.SafeString(JSON.stringify(obj));
     },
@@ -55,31 +59,42 @@ const handlebarsInst = exphbs.create({
       return left === right;
     },
   },
-  partialsDir: ['views/partials/'],
+  partialsDir: ["views/partials/"],
   handlebars: allowInsecurePrototypeAccess(Handlebars),
 });
 
-handlebarsInst.handlebars.registerHelper('dateFormat', require('handlebars-dateformat'));
-handlebarsInst.handlebars.registerHelper('checkGender', function (value, inputValue) {
+handlebarsInst.handlebars.registerHelper(
+  "dateFormat",
+  require("handlebars-dateformat")
+);
+handlebarsInst.handlebars.registerHelper("checkGender", function (
+  value,
+  inputValue
+) {
   if (value == inputValue) {
-    return 'checked';
+    return "checked";
   } else {
-    return '';
+    return "";
   }
 });
-handlebarsInst.handlebars.registerHelper('select', function (selected, options) {
+handlebarsInst.handlebars.registerHelper("select", function (
+  selected,
+  options
+) {
   if (!selected) {
-    selected = 'United States';
+    selected = "United States";
   }
-  return options.fn(this).replace(new RegExp(' value="' + selected + '"'), '$& selected="selected"');
+  return options
+    .fn(this)
+    .replace(new RegExp(' value="' + selected + '"'), '$& selected="selected"');
 });
 
-app.engine('handlebars', handlebarsInst.engine);
-app.set('view engine', 'handlebars');
+app.engine("handlebars", handlebarsInst.engine);
+app.set("view engine", "handlebars");
 
 configRoutes(app);
 
 app.listen(3000, () => {
-  console.log('Create Server for Smart Home');
-  console.log('Your routes will be running on http://localhost:3000');
+  console.log("Create Server for Smart Home");
+  console.log("Your routes will be running on http://localhost:3000");
 });

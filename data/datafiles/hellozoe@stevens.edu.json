@@ -7,10 +7,35 @@
   "gender": "Female",
   "rooms": ["living room", "bedroom", "kitchen"],
   "devices": [
-    { "deviceID": "device1", "deviceName": "TV", "settings": {}, "room": "living room" },
-    { "deviceID": "device2", "deviceName": "AC", "settings": {}, "room": "living room" },
-    { "deviceID": "device3", "deviceName": "Vaccum", "settings": {}, "room": "living room" },
-    { "deviceID": "device4", "deviceName": "Dishwasher", "settings": {}, "room": "kitchen" },
-    { "deviceID": "device4", "deviceName": "TV", "settings": {}, "room": "bedroom" }
+    {
+      "deviceID": "device1",
+      "deviceName": "TV",
+      "settings": {},
+      "room": "living room"
+    },
+    {
+      "deviceID": "device2",
+      "deviceName": "AC",
+      "settings": {},
+      "room": "living room"
+    },
+    {
+      "deviceID": "device3",
+      "deviceName": "Vaccum",
+      "settings": {},
+      "room": "living room"
+    },
+    {
+      "deviceID": "device4",
+      "deviceName": "Dishwasher",
+      "settings": {},
+      "room": "kitchen"
+    },
+    {
+      "deviceID": "device4",
+      "deviceName": "TV",
+      "settings": {},
+      "room": "bedroom"
+    }
   ]
 }
