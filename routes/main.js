@@ -15,5 +15,3 @@ router.use("/room", roomRouter);
 router.use("/tasks", taskRouter);
 
 module.exports = router;
-
-users / profile;
