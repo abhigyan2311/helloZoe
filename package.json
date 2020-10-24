@@ -1,13 +1,14 @@
 {
-  "name": "cs-545-project",
+  "name": "hellozoe",
   "version": "1.0.0",
-  "description": "package created for Smart Home",
+  "description": "Smart Home Assistant",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
+    "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Smart Home",
+  "author": "AlphaOmega",
   "license": "ISC",
   "dependencies": {
     "@handlebars/allow-prototype-access": "^1.0.3",
