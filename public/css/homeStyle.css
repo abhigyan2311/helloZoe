@@ -1,0 +1,67 @@
+.homeTitle {
+	color: white;
+	font-weight: 400;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.greetingTitle {
+	color: white;
+	font-weight: 300;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.columnHeadings {
+	color: whitesmoke;
+	font-weight: 400;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+}
+
+.card-title {
+	color: #455a64;
+}
+
+.white-text {
+	display: inline;
+	color: white;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.videoPlayerDiv {
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.homeCards:hover {
+	background-color: #f50057;
+}
+
+.homeCards:hover .hover-title {
+	color: white !important;
+}
+
+.off-card {
+	background-color: #e6153d;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.on-card {
+	background-color: #00e676;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.notifTitle {
+	font-size: 20px;
+	font-weight: 400;
+	color: #455a64;
+}
+
+.notifSubTitle {
+	font-size: 18px;
+	font-weight: 300;
+	color: #7d8c93;
+}
+
+.running:before {
+	content: " \25CF";
+	font-size: 18px;
+	color: #4caf50;
+}
