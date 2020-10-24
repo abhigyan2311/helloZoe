@@ -1,5 +1,6 @@
 const express = require("express");
 const session = require("express-session");
+const body = require("body-parser");
 const app = express();
 const static = express.static(__dirname + "/public");
 
@@ -12,6 +13,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use("/public", static);
 app.use(express.json());
+app.use(body.urlencoded({ extended: false }));
 app.use(express.urlencoded({ extended: true }));
 
 app.use(
