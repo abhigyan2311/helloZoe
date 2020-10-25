@@ -7,6 +7,6 @@ exports.homeController = asyncHandler(async (req, res, next) => {
 		return res.render("home/homePublic", { title: "Home Page" });
 	} else {
 		const userData = await users.getUserByEmail(req.session.user.email);
-		return res.render("home/home", { user: userData, title: "Smart Home" });
+		return res.render("home/home", { user: userData, title: "Home Dashboard" });
 	}
 });

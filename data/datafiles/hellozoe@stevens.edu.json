@@ -5,7 +5,11 @@
   "email": "hellozoe@stevens.edu",
   "hashedPassword": "$2b$10$qHT6ISuNUy6M5RIIzQRzFO6R9G9cUqyQHD2FcJ8dQRi91rZSqznUK",
   "gender": "Female",
-  "rooms": ["living room", "bedroom", "kitchen"],
+  "rooms": [
+    "living room",
+    "bedroom",
+    "kitchen"
+  ],
   "devices": [
     {
       "deviceID": "device1",
@@ -36,6 +40,21 @@
       "deviceName": "TV",
       "settings": {},
       "room": "bedroom"
+    }
+  ],
+  "notifications": [
+    {
+      "name": "Vacuum Cleaner",
+      "icon": "vacuum.svg",
+      "status": true,
+      "timeLeft": "00:35",
+      "battery": "Mid"
+    },
+    {
+      "name": "Coffee Maker",
+      "icon": "coffee.svg",
+      "status": true,
+      "timeLeft": "00:10"
     }
   ]
 }
