@@ -1,4 +1,5 @@
 @import "homeStyle.css";
+@import "profileStyle.css";
 
 body {
 	background: url("../imgs/bg.jpg") no-repeat center center fixed;

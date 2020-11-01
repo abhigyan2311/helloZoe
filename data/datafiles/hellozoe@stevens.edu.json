@@ -5,41 +5,42 @@
   "email": "hellozoe@stevens.edu",
   "hashedPassword": "$2b$10$qHT6ISuNUy6M5RIIzQRzFO6R9G9cUqyQHD2FcJ8dQRi91rZSqznUK",
   "gender": "Female",
-  "rooms": [
-    "living room",
-    "bedroom",
-    "kitchen"
-  ],
+  "rooms": ["living room", "bedroom", "kitchen"],
   "devices": [
     {
       "deviceID": "device1",
       "deviceName": "TV",
       "settings": {},
-      "room": "living room"
+      "room": "living room",
+      "icon": "tv.svg"
     },
     {
       "deviceID": "device2",
       "deviceName": "AC",
       "settings": {},
-      "room": "living room"
+      "room": "living room",
+      "icon": "AC.png"
     },
     {
       "deviceID": "device3",
       "deviceName": "Vaccum",
       "settings": {},
-      "room": "living room"
+      "room": "living room",
+      "icon": "vacuum.svg"
     },
     {
       "deviceID": "device4",
       "deviceName": "Dishwasher",
       "settings": {},
-      "room": "kitchen"
+      "room": "kitchen",
+      "icon": "dishwasher.png"
     },
     {
       "deviceID": "device4",
       "deviceName": "TV",
       "settings": {},
-      "room": "bedroom"
+      "room": "bedroom",
+      "icon": "tv.svg"
     }
   ],
   "notifications": [
