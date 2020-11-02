@@ -8,6 +8,8 @@ const { getLogoutController } = require("./getLogout");
 const { getDevicesController } = require("./getDevices");
 const { getProfileController } = require("./getProfile");
 const { getEditController } = require("./getEdit");
+const { postUpdateProfileController } = require("./postUpdateProfile");
+const { postUpdatePasswordController } = require("./postUpdatePassword");
 
 // Initialize router
 const userRouter = express.Router({ mergeParams: true });
@@ -21,5 +23,7 @@ userRouter.route("/logout").get(getLogoutController);
 userRouter.route("/devices").get(getDevicesController);
 userRouter.route("/profile").get(getProfileController);
 userRouter.route("/edit").get(getEditController);
+userRouter.route("/updateprofile").post(postUpdateProfileController);
+userRouter.route("/updatepassword").post(postUpdatePasswordController);
 
 module.exports = userRouter;

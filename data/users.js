@@ -104,6 +104,19 @@ const exportedMethods = {
     const success = await saveJSONToFile(filename, data);
     return success;
   },
+
+  async updateUser(email, newUserInfo) {
+    let currentUserData = await this.getUserByEmail(email);
+    for (let key in newUserInfo) {
+      currentUserData[key] = newUserInfo[key];
+    }
+    const filename = path.join(__dirname, "datafiles", email + ".json");
+    const success = await saveJSONToFile(filename, currentUserData);
+    if (!success) throw "Update Failed";
+    const updatedUser = await this.getUserByEmail(email);
+    return updatedUser;
+  },
+
   saveJSONToFile,
 };
 

@@ -1,61 +1,32 @@
 {
   "_id": "1",
   "firstName": "Zoe",
-  "lastName": "Brown",
+  "lastName": "Green",
   "email": "hellozoe@stevens.edu",
   "hashedPassword": "$2b$10$qHT6ISuNUy6M5RIIzQRzFO6R9G9cUqyQHD2FcJ8dQRi91rZSqznUK",
   "gender": "Female",
+  "birthday": "1998-01-01T00:00:00.000Z",
+  "address": {
+    "streetAddress": "100 1st St",
+    "city": "Hoboken",
+    "state": "NJ",
+    "zipCode": "07030",
+    "country": "United States"
+  },
+  "mobile": "(666) 8080-9262",
+  "phone": "(646) 6655-3452",
+  "profilePic": "boy.png",
   "rooms": ["living room", "bedroom", "kitchen"],
   "devices": [
-    {
-      "deviceID": "device1",
-      "deviceName": "TV",
-      "settings": {},
-      "room": "living room",
-      "icon": "tv.svg"
-    },
-    {
-      "deviceID": "device2",
-      "deviceName": "AC",
-      "settings": {},
-      "room": "living room",
-      "icon": "AC.png"
-    },
-    {
-      "deviceID": "device3",
-      "deviceName": "Vaccum",
-      "settings": {},
-      "room": "living room",
-      "icon": "vacuum.svg"
-    },
-    {
-      "deviceID": "device4",
-      "deviceName": "Dishwasher",
-      "settings": {},
-      "room": "kitchen",
-      "icon": "dishwasher.png"
-    },
-    {
-      "deviceID": "device4",
-      "deviceName": "TV",
-      "settings": {},
-      "room": "bedroom",
-      "icon": "tv.svg"
-    }
+    { "deviceID": "device1", "deviceName": "TV", "settings": {}, "room": "living room", "icon": "tv.svg" },
+    { "deviceID": "device2", "deviceName": "AC", "settings": {}, "room": "living room", "icon": "AC.png" },
+    { "deviceID": "device3", "deviceName": "Vaccum", "settings": {}, "room": "living room", "icon": "vacuum.svg" },
+    { "deviceID": "device4", "deviceName": "Dishwasher", "settings": {}, "room": "kitchen", "icon": "dishwasher.png" },
+    { "deviceID": "device4", "deviceName": "TV", "settings": {}, "room": "bedroom", "icon": "tv.svg" }
   ],
   "notifications": [
-    {
-      "name": "Vacuum Cleaner",
-      "icon": "vacuum.svg",
-      "status": true,
-      "timeLeft": "00:35",
-      "battery": "Mid"
-    },
-    {
-      "name": "Coffee Maker",
-      "icon": "coffee.svg",
-      "status": true,
-      "timeLeft": "00:10"
-    }
-  ]
+    { "name": "Vacuum Cleaner", "icon": "vacuum.svg", "status": true, "timeLeft": "00:35", "battery": "Mid" },
+    { "name": "Coffee Maker", "icon": "coffee.svg", "status": true, "timeLeft": "00:10" }
+  ],
+  "biography": ""
 }
