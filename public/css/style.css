@@ -1,5 +1,6 @@
 @import "homeStyle.css";
 @import "profileStyle.css";
+@import "deviceStyle.css";
 
 body {
 	background: url("../imgs/bg.jpg") no-repeat center center fixed;
