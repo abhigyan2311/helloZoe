@@ -116,7 +116,7 @@ const exportedMethods = {
     const updatedUser = await this.getUserByEmail(email);
     return updatedUser;
   },
-
+  getFileAsJSON,
   saveJSONToFile,
 };
 
