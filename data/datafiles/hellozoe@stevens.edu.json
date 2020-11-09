@@ -22,7 +22,7 @@
     { "deviceID": "device2", "deviceName": "AC", "settings": {}, "room": "living room", "icon": "AC.png" },
     { "deviceID": "device3", "deviceName": "Vaccum", "settings": {}, "room": "living room", "icon": "vacuum.svg" },
     { "deviceID": "device4", "deviceName": "Dishwasher", "settings": {}, "room": "kitchen", "icon": "dishwasher.png" },
-    { "deviceID": "device4", "deviceName": "TV", "settings": {}, "room": "bedroom", "icon": "tv.svg" }
+    { "deviceID": "device5", "deviceName": "TV", "settings": {}, "room": "bedroom", "icon": "tv.svg" }
   ],
   "notifications": [
     { "name": "Vacuum Cleaner", "icon": "vacuum.svg", "status": true, "timeLeft": "00:35", "battery": "Mid" },
