@@ -3,3 +3,30 @@
 	font-weight: 400;
 	text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
 }
+
+.addDevice {
+	cursor: pointer;
+	width: 30%;
+	background-color: lightgray;
+	padding-top: 3rem;
+	opacity: 0.8;
+}
+
+.deviceLayout {
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto;
+}
+
+.deviceBox {
+	width: 100%;
+	margin: 20px;
+}
+
+.deviceImg {
+	padding: 4rem;
+}
+
+.delete {
+	color: red;
+}
