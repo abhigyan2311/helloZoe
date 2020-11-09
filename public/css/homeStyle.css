@@ -1,3 +1,7 @@
+.card {
+	cursor: pointer;
+}
+
 .homeTitle {
 	color: white;
 	font-weight: 400;
@@ -38,14 +42,35 @@
 	color: white !important;
 }
 
+.custom-card-padding {
+	padding-top: 10px;
+}
+
 .off-card {
 	background-color: #e6153d;
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+	height: 50px;
+}
+
+.off-card:hover {
+	background-color: #feb72b;
 }
 
 .on-card {
-	background-color: #00e676;
+	background-color: #00918e;
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+	height: 50px;
+}
+.on-card:hover {
+	background-color: #feb72b;
+}
+
+.black {
+	background-color: black;
+}
+
+.small-text {
+	font-size: 11px;
 }
 
 .notifTitle {
