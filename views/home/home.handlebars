@@ -123,7 +123,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card mt-2">
+            <div class="card mt-2" id="testCard">
                 <div class="card-body">
                     <img src="./public/imgs/icons/bed.svg" height="40px" class="mb-1" />
                     <h5 class="card-title hover-title ml-2" style="display: inline;">Bedroom</h5>
@@ -178,7 +178,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card homeCards mt-2">
+            <div class="card homeCards mt-2" id="showLater" style="visibility: hidden;">
                 <div class="card-body">
                     <div class="row">
                         <div class="col">
@@ -212,6 +212,14 @@
             </div>
         </div>
     </div>
+    <script>
+        function showIt() {
+            const audio = new Audio("https://notificationsounds.com/storage/sounds/file-sounds-1151-swiftly.mp3");
+            audio.play();
+            document.getElementById("showLater").style.visibility = "visible";
+        }
+        setTimeout("showIt()", 5000);
+    </script>
 
 
     <div class="row mt-5 ">
