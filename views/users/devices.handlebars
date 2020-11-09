@@ -3,12 +3,12 @@
         <h1 class="device-title">Your Devices</h1>
     </div>
     <div class="deviceLayout">
-        <div class="card deviceBox addDevice" style="width: 18rem;">
+        <a class="card deviceBox addDevice" style="width: 18rem;" href="/devices/addDevices">
             <div class="card-body">
                 <h5 class="card-title">+ Add New Device</h5>
                 <p class="card-text">Click to connect a new device</p>
             </div>
-        </div>
+        </a>
         {{#each allDevices}}
             <div class="card deviceBox" style="width: 18rem;">
                 <img src="/public/imgs/icons/{{icon}}" class="card-img-top deviceImg" alt="{{deviceName}}">

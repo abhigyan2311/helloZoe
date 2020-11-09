@@ -17,57 +17,65 @@ app.use(body.urlencoded({ extended: false }));
 app.use(express.urlencoded({ extended: true }));
 
 app.use(
-	session({
-		name: "AuthCookie",
-		secret: "Build your smart home",
-		saveUninitialized: true,
-		resave: false,
-	})
+  session({
+    name: "AuthCookie",
+    secret: "Build your smart home",
+    saveUninitialized: true,
+    resave: false,
+  })
 );
 
 app.use(function (req, res, next) {
-	res.locals.session = req.session;
-	next();
+  res.locals.session = req.session;
+  next();
 });
 app.use(async (req, res, next) => {
-	if (req.body._method) {
-		req.method = req.body._method;
-	}
-	next();
+  if (req.body._method) {
+    req.method = req.body._method;
+  }
+  next();
 });
 
 const handlebarsInst = exphbs.create({
-	defaultLayout: "main",
-	// Specify helpers which are only registered on this instance.
-	helpers: {
-		asJSON: (obj, spacing) => {
-			if (typeof spacing === "number") return new Handlebars.SafeString(JSON.stringify(obj, null, spacing));
-			return new Handlebars.SafeString(JSON.stringify(obj));
-		},
-		divisibleBy: (num, divideBy) => {
-			return num > 0 && num % divideBy == 0;
-		},
-		equals: (left, right) => {
-			return left === right;
-		},
-	},
-	partialsDir: ["views/partials/"],
-	handlebars: allowInsecurePrototypeAccess(Handlebars),
+  defaultLayout: "main",
+  // Specify helpers which are only registered on this instance.
+  helpers: {
+    asJSON: (obj, spacing) => {
+      if (typeof spacing === "number") return new Handlebars.SafeString(JSON.stringify(obj, null, spacing));
+      return new Handlebars.SafeString(JSON.stringify(obj));
+    },
+    divisibleBy: (num, divideBy) => {
+      return num > 0 && num % divideBy == 0;
+    },
+    equals: (left, right) => {
+      return left === right;
+    },
+  },
+  partialsDir: ["views/partials/"],
+  handlebars: allowInsecurePrototypeAccess(Handlebars),
 });
 
 handlebarsInst.handlebars.registerHelper("dateFormat", require("handlebars-dateformat"));
-handlebarsInst.handlebars.registerHelper("checkGender", function (value, inputValue) {
-	if (value == inputValue) {
-		return "checked";
-	} else {
-		return "";
-	}
+handlebarsInst.handlebars.registerHelper("checkValue", function (value, inputValue) {
+  if (value == inputValue) {
+    return "checked";
+  } else {
+    return "";
+  }
 });
 handlebarsInst.handlebars.registerHelper("select", function (selected, options) {
-	if (!selected) {
-		selected = "United States";
-	}
-	return options.fn(this).replace(new RegExp(' value="' + selected + '"'), '$& selected="selected"');
+  if (!selected) {
+    selected = "United States";
+  }
+  return options.fn(this).replace(new RegExp(' value="' + selected + '"'), '$& selected="selected"');
+});
+
+handlebarsInst.handlebars.registerHelper("checkInArray", function (value, inputArray) {
+  if (inputArray.includes(value)) {
+    return "checked";
+  } else {
+    return "";
+  }
 });
 
 app.engine("handlebars", handlebarsInst.engine);
@@ -76,5 +84,5 @@ app.set("view engine", "handlebars");
 app.use("/", appRoutes);
 
 app.listen(PORT, () => {
-	console.log(`Smart Home Server running at http://localhost:${PORT}`);
+  console.log(`Smart Home Server running at http://localhost:${PORT}`);
 });
