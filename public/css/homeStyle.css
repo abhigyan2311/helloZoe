@@ -38,14 +38,24 @@
 	color: white !important;
 }
 
+.custom-card-padding {
+	padding-top: 10px;
+}
+
 .off-card {
 	background-color: #e6153d;
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+	height: 50px;
 }
 
 .on-card {
-	background-color: #00e676;
+	background-color: #4cbb17;
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+	height: 50px;
+}
+
+.small-text {
+	font-size: 11px;
 }
 
 .notifTitle {

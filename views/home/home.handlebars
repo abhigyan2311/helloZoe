@@ -64,23 +64,41 @@
                     <div class="row mt-3">
                         <div class="col">
                             <div class="card off-card">
-                                <div class="card-body">
-                                    <img src="./public/imgs/icons/fan.svg" height="30px" class="mb-1" />
+                                <div class="card-body custom-card-padding">
+                                    <img src="./public/imgs/icons/fan.svg" height="25px" class="" />
                                     <span class="white-text ml-2">Fan</span>
-                                    <div class="col">
-
-                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="card on-card">
-                                <div class="card-body">
-                                    <img src="./public/imgs/icons/lamp.svg" height="30px" class="mb-1" />
-                                    <span class="white-text ml-2">Bulb</span>
-                                    <div class="col">
-                                    
-                                    </div>
+                                <div class="card-body custom-card-padding">
+                                    <img src="./public/imgs/icons/lamp.svg" height="25px" class="mb-1" />
+                                    <span class="white-text ml-2">Light</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mt-2">
+                <div class="card-body">
+                    <img src="./public/imgs/icons/living-room.svg" height="40px" class="mb-1" />
+                    <h5 class="card-title hover-title ml-2" style="display: inline;">Kitchen</h5>
+                    <div class="row mt-3">
+                        <div class="col">
+                            <div class="card off-card">
+                                <div class="card-body custom-card-padding">
+                                    <img src="./public/imgs/icons/dishwasher.svg" height="25px" class="" />
+                                    <span class="white-text ml-2 small-text">Dishwasher</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card on-card">
+                                <div class="card-body custom-card-padding">
+                                    <img src="./public/imgs/icons/lamp.svg" height="25px" class="mb-1" />
+                                    <span class="white-text ml-2">Light</span>
                                 </div>
                             </div>
                         </div>
@@ -172,8 +190,8 @@
         <a class="btn btn-outline-primary" href="/room/{{this}}">{{this}}</a>
     </div>
     {{/each}}
-<br>
-<div class="nav-item">
-    <a class="btn btn-primary" href="/tasks/managetasks">Manage Tasks</a>
-    <a class="btn btn-primary" href="/tasks/addTasks">Add a Task</a>
-</div>
+    <br>
+    <div class="nav-item">
+        <a class="btn btn-primary" href="/tasks/managetasks">Manage Tasks</a>
+        <a class="btn btn-primary" href="/tasks/addTasks">Add a Task</a>
+    </div>
