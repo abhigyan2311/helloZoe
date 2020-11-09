@@ -1,3 +1,7 @@
+.card {
+	cursor: pointer;
+}
+
 .homeTitle {
 	color: white;
 	font-weight: 400;
@@ -48,10 +52,17 @@
 	height: 50px;
 }
 
+.off-card:hover {
+	background-color: #feb72b;
+}
+
 .on-card {
-	background-color: #2c7873;
+	background-color: #00918e;
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 	height: 50px;
+}
+.on-card:hover {
+	background-color: #feb72b;
 }
 
 .small-text {
