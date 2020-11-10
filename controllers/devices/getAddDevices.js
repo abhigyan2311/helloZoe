@@ -3,7 +3,7 @@ const data = require("../../data");
 
 const users = data.users;
 
-exports.getAddTaskController = asyncHandler(async (req, res, next) => {
+exports.getAddDevicesController = asyncHandler(async (req, res, next) => {
   if (!req.session.user) {
     return res.render("home/accessDenied", { title: "Access Denied" });
   }

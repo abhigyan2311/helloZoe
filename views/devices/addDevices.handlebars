@@ -1,0 +1,18 @@
+<h1 class="device-title">Add New Device</h1>
+<br>
+<p class="device-caption">Type in the device name you would like to add below. We will search and check if we can connect to the device.</p>
+
+<form id="form-id">
+    <label class="label-class">
+        Device Name: 
+        <input type="text" name="deviceName">
+    </label>
+</form>
+<button type="submit"  class="btn btn-primary" onclick="searchButtonClick()">Search</button>
+
+<br>
+<br>
+<div id="add-popup" hidden>
+    <p>The device has been found. Add Device?</p>
+    <button type="submit" form="form-id" class="btn btn-primary">Add Device</button>
+</div>
