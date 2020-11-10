@@ -1,14 +1,28 @@
+@import "navbar.css";
 @import "homeStyle.css";
 @import "profileStyle.css";
 @import "deviceStyle.css";
 @import "manageTasksStyle.css";
 
 body {
-  background: url("../imgs/bg.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  font-family: "Roboto", sans-serif;
-  /* cursor: url("../imgs/icons/cursor.png"), auto !important; */
+	background: url("../imgs/bg.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	font-family: "Roboto", sans-serif;
+	/* cursor: url("../imgs/icons/cursor.png"), auto !important; */
+}
+
+body::-webkit-scrollbar {
+	width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: #f50057;
+	outline: 1px solid #f50057;
 }

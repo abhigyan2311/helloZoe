@@ -1,6 +1,6 @@
 <div class="mainHome">
-    <h2 class="greetingTitle">Good Morning, Dave</h2>
-    <div class="row mt-4">
+    <h2 class="greetingTitle">Good Morning, {{user.firstName}}</h2>
+    <div class="row mt-4 mb-4">
         <div class="col">
             <h5 class="columnHeadings">TV</h5>
             <div class="card homeCards">
@@ -57,88 +57,96 @@
         </div>
         <div class="col">
             <h5 class="columnHeadings">ROOMS</h5>
-            <div class="card">
-                <div class="card-body">
-                    <img src="./public/imgs/icons/living-room.svg" height="40px" class="mb-1" />
-                    <h5 class="card-title hover-title ml-2" style="display: inline;"><a href="/room/living room">Living Room</a></h5>
-                    <div class="row mt-3">
-                        <div class="col">
-                            <div class="card on-card">
-                                <div class="card-body custom-card-padding">
-                                    <img src="./public/imgs/icons/fan.svg" height="25px" class="" />
-                                    <span class="white-text ml-2">Fan</span>
+            <a class="cardLink" href="/room/living room">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="./public/imgs/icons/living-room.svg" height="40px" class="mb-1" />
+                        <h5 class="card-title hover-title ml-2" style="display: inline;">Living
+                            Room</h5>
+                        <div class="row mt-3">
+                            <div class="col">
+                                <div class="card on-card toggleDeviceCard">
+                                    <div class="card-body custom-card-padding">
+                                        <img src="./public/imgs/icons/fan.svg" height="25px" class="" />
+                                        <span class="white-text ml-2">Fan</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="card on-card">
-                                <div class="card-body custom-card-padding">
-                                    <img src="./public/imgs/icons/lamp.svg" height="25px" class="mb-1" />
-                                    <span class="white-text ml-2">Light</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card mt-2">
-                <div class="card-body">
-                    <img src="./public/imgs/icons/kitchen.svg" height="40px" class="mb-1" />
-                    <h5 class="card-title hover-title ml-2" style="display: inline;"><a href="/room/kitchen">Kitchen</a></h5>
-                    <div class="row mt-3">
-                        <div class="col">
-                            <div class="card on-card">
-                                <div class="card-body custom-card-padding">
-                                    <img src="./public/imgs/icons/coffee-yellow.svg" height="25px" class="" />
-                                    <span class="white-text ml-2 small-text">Coffee M.</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card on-card">
-                                <div class="card-body custom-card-padding">
-                                    <img src="./public/imgs/icons/lamp.svg" height="25px" class="mb-1" />
-                                    <span class="white-text ml-2">Light</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col">
-                            <div class="card on-card">
-                                <div class="card-body custom-card-padding">
-                                    <img src="./public/imgs/icons/fan.svg" height="25px" class="" />
-                                    <span class="white-text ml-2">Fan</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card on-card">
-                                <div class="card-body custom-card-padding">
-                                    <img src="./public/imgs/icons/lamp.svg" height="25px" class="mb-1" />
-                                    <span class="white-text ml-2">Heater</span>
+                            <div class="col">
+                                <div class="card on-card toggleDeviceCard">
+                                    <div class="card-body custom-card-padding">
+                                        <img src="./public/imgs/icons/lamp.svg" height="25px" class="mb-1" />
+                                        <span class="white-text ml-2">Light</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="card mt-2" id="testCard">
-                <div class="card-body">
-                    <img src="./public/imgs/icons/bed.svg" height="40px" class="mb-1" />
-                    <h5 class="card-title hover-title ml-2" style="display: inline;"><a href="/room/bedroom">Bedroom</a></h5>
-                    <div class="row mt-3">
-                        <div class="col">
-                            <div class="card off-card">
-                                <div class="card-body custom-card-padding">
-                                    <img src="./public/imgs/icons/power-button.svg" height="25px" class="" />
-                                    <span class="white-text ml-2">All appliances</span>
+            </a>
+            <a class="cardLink" href="/room/kitchen">
+                <div class="card mt-2">
+                    <div class="card-body">
+                        <img src="./public/imgs/icons/kitchen.svg" height="40px" class="mb-1" />
+                        <h5 class="card-title hover-title ml-2" style="display: inline;">Kitchen</h5>
+                        <div class="row mt-3">
+                            <div class="col">
+                                <div class="card on-card toggleDeviceCard">
+                                    <div class="card-body custom-card-padding">
+                                        <img src="./public/imgs/icons/coffee-yellow.svg" height="25px" class="" />
+                                        <span class="white-text ml-2 small-text">Coffee M.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card on-card toggleDeviceCard">
+                                    <div class="card-body custom-card-padding">
+                                        <img src="./public/imgs/icons/lamp.svg" height="25px" class="mb-1" />
+                                        <span class="white-text ml-2">Light</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col">
+                                <div class="card on-card toggleDeviceCard">
+                                    <div class="card-body custom-card-padding">
+                                        <img src="./public/imgs/icons/fan.svg" height="25px" class="" />
+                                        <span class="white-text ml-2">Fan</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card on-card toggleDeviceCard">
+                                    <div class="card-body custom-card-padding">
+                                        <img src="./public/imgs/icons/lamp.svg" height="25px" class="mb-1" />
+                                        <span class="white-text ml-2">Heater</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </a>
+            <a class="cardLink" href="/room/bedroom">
+                <div class="card mt-2">
+                    <div class="card-body">
+                        <img src="./public/imgs/icons/bed.svg" height="40px" class="mb-1" />
+                        <h5 class="card-title hover-title ml-2" style="display: inline;">Bedroom
+                        </h5>
+                        <div class="row mt-3">
+                            <div class="col">
+                                <div class="card off-card toggleDeviceCard">
+                                    <div class="card-body custom-card-padding">
+                                        <img src="./public/imgs/icons/power-button.svg" height="25px" class="" />
+                                        <span class="white-text ml-2">All appliances</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
         </div>
         <div class="col">
             <h5 class="columnHeadings">NOTIFICATIONS</h5>
@@ -220,12 +228,3 @@
         }
         setTimeout("showIt()", 5000);
     </script>
-
-
-    <div class="row mt-5 ">
-
-    </div>
-    <div class="nav-item">
-        <a class="btn btn-info" href="/tasks/managetasks">Manage Tasks</a>
-        <a class="btn btn-info" href="/tasks/addTask">Add a Task</a>
-    </div>

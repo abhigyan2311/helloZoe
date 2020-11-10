@@ -1,0 +1,10 @@
+.circleCard {
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+}
+
+.circleCard .card-body {
+	padding-top: 5px;
+	padding-left: 8px;
+}

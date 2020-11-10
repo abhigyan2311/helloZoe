@@ -65,8 +65,8 @@
 	background-color: #feb72b;
 }
 
-.black {
-	background-color: black;
+.cardLink:hover {
+	text-decoration: none;
 }
 
 .small-text {
