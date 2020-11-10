@@ -32,7 +32,8 @@
 }
 
 .deviceImg {
-	padding: 4rem;
+	padding: 2rem;
+	height: 200px;
 }
 
 .delete {
