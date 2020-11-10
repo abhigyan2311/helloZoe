@@ -17,13 +17,17 @@
 
         {{#if session.user}}
 
-        <div class="nav-item">
-            <a class="btn btn-primary" href="/users/devices">Your Device</a>
+        <div class="nav-item mr-3">
+            <a class="btn btn-info" href="/users/devices">Your Device</a>
+        </div>
+
+        <div class="nav-item mr-3">
+            <a class="btn btn-info" href="/tasks/manageTasks">Your Tasks</a>
         </div>
 
         <ul class="navbar-nav">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                <a class="nav-link dropdown-toggle btn btn-info" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
                     Welcome {{session.user.firstName}}
                 </a>
