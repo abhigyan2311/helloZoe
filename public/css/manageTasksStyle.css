@@ -96,3 +96,12 @@ input:checked + .slider:before {
   margin-right: auto;
   padding: 10px;
 }
+#taskInput1 {
+  width: 150%;
+  border-radius: 10px;
+}
+
+#deviceID {
+  width: 150%;
+  border-radius: 10px;
+}
