@@ -4,13 +4,12 @@
         <div class="col-md-6">
             <div class="card">
                 <header class="card-header">
-                    <a href="/users/register" class="float-right btn btn-outline-primary mt-1">Registration</a>
-                    <h1 class="card-title mt-2">Login</h1>
+                    <h1 class="card-title mt-2 text-center">Login</h1>
                 </header>
                 <article class="card-body">
                     <form method="POST" id="login">
                         <div class="form-group">
-                            <label for="email">Email address</label>
+                            <label id="label-email" for="email">Email address</label>
                             <input type="email" id="email" class="form-control" placeholder="" name="email"
                                 value="{{email}}" required>
                         </div> <!-- form-group end.// -->
@@ -20,7 +19,7 @@
                                 minlength="8">
                         </div> <!-- form-group end.// -->
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary btn-block"> Login </button>
+                            <button type="submit" id="login-btn" class="btn btn-block"> Login </button>
                         </div> <!-- form-group// -->
 
                         {{#if errors}}
