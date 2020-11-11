@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg mb-3">
     <a class="navbar-brand" href="/">
-        <h1 class="homeTitle">Home Dashboard</h1>
+        <h1 class="homeTitle">Home</h1>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,21 +16,34 @@
 
 
         {{#if session.user}}
-
         <div class="nav-item mr-3">
-            <a class="btn btn-info" href="/users/devices">Your Device</a>
+            <a href="/users/devices">
+                <div class="card circleCard" data-toggle="tooltip" data-placement="bottom" title="Devices">
+                    <div class="card-body">
+                        <img src="http://localhost:3000/public/imgs/icons/appliance.svg" height="20px" />
+                    </div>
+                </div>
+            </a>
         </div>
 
         <div class="nav-item mr-3">
-            <a class="btn btn-info" href="/tasks/manageTasks">Your Tasks</a>
+            <a href="/tasks/manageTasks">
+                <div class="card circleCard" data-toggle="tooltip" data-placement="bottom" title="Tasks">
+                    <div class="card-body">
+                        <img src="http://localhost:3000/public/imgs/icons/clipboard.svg" height="20px" />
+                    </div>
+                </div>
+            </a>
         </div>
 
         <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle btn btn-info" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Welcome {{session.user.firstName}}
-                </a>
+            <li class="nav-item dropleft" data-toggle="tooltip" data-placement="bottom" title="Profile">
+                <div class="card circleCard" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <div class="card-body">
+                        <img src="http://localhost:3000/public/imgs/icons/user.svg" height="20px" />
+                    </div>
+                </div>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="/users/profile"><i class="fas fa-user-circle"></i> My Profile</a>
                     <a class="dropdown-item" href="/users/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
