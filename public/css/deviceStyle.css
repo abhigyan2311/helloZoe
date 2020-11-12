@@ -32,8 +32,8 @@
 }
 
 .deviceImg {
-	padding: 2rem;
-	height: 200px;
+	padding: 1rem;
+	height: 150px;
 }
 
 .delete {
@@ -63,4 +63,8 @@
 	border-radius: 8px;
 	border-color: lightgreen;
 	border-style: solid;
+}
+
+.device-tableheader {
+	color: white;
 }

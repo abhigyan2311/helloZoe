@@ -2,11 +2,22 @@
 <br>
 <p class="device-caption">Type in the device name you would like to add below. We will search and check if we can connect to the device.</p>
 
-<form id="form-id">
-    <label class="label-class">
-        Device Name: 
-        <input type="text" name="deviceName">
-    </label>
+<form id="form-id" method="POST" action="/devices/addDevices">
+    <div class="form-group">
+        <label class="label-class">
+            Device Name: 
+            <input type="text" name="deviceName">
+        </label>
+    </div>
+    <div class="form-group">
+        <label class="label-class">Choose A Room To Add Device To:
+            <select id="roomSelection" name="roomSelection" class="form-control">
+                {{#each rooms}}
+                <option value="{{this}}">{{this}}</option>
+                {{/each}}
+            </select>
+        </label>
+    </div>
 </form>
 <button type="submit"  class="btn btn-primary" onclick="searchButtonClick()">Search</button>
 
