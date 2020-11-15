@@ -29,6 +29,11 @@
                         data-target="#del-device{{@index}}"><i class="fa fa-trash"></i>
                     </button>
 
+                     {{!-- <label class="switch">
+                        <input type="checkbox" {{checkValue "on" status}} id="{{deviceID}}status">
+                        <span class="slider round"></span>
+                    </label> --}}
+
                     <!-- Modal -->
                     <div class="modal fade" id="del-device{{@index}}" tabindex="-1" role="dialog">
                         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -62,9 +67,29 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    Edit Device
+                                    <form action="/tasks/editTask" method="POST" id="edit-form">
+
+                                        <div class="form-group">
+                                            <label class="switch">
+                                                Turn On/Off:
+                                                <input type="checkbox" {{checkValue "on" status}} id="{{taskID}}status">
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="device">Device
+                                                <input type="text" readonly class="form-control-plaintext"
+                                                    name="deviceName" id="deviceid{{@index}}" value="{{deviceName}}">
+                                            </label>
+                                        </div>
+
+                                        <input type="hidden" name="taskID" value={{taskID}} />
+                                
+                                    </form>
+                                
                                 </div>
                                 <div class="modal-footer">
+                                    <button type="submit" class="btn btn-primary" for="edit-form">Save</button>
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                                     {{!-- <form action="/devices/delete/{{deviceID}}" method="POST">
                                         <button type="submit" class="btn btn-danger">Delete</button>
