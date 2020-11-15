@@ -19,13 +19,19 @@ exports.postAddDevicesController = asyncHandler(async (req, res, next) => {
     if (!newDeviceInfo.roomSelection) {
       roomSelection = "";
     }
+
+    let tags = newDeviceInfo.tags;
+    if (typeof newDeviceInfo.tags == "string") {
+      tags = [tags];
+    }
     
     const newDevice = {
       deviceID: "",
       deviceName: deviceName,
       settings: {},
       room: roomSelection,
-      icon: ""
+      icon: "",
+      tags: tags
     };
 
     const success = await devices.addDevice(req.session.user.email, newDevice);

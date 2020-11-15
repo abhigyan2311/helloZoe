@@ -16,6 +16,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{deviceName}}</h5>
                     <p class="card-text">Room: {{room}}</p>
+                    <p class="card-text">Tags: {{tags}}</p>
                 </div>
                 <div class="card-body">
                     {{!-- <a href="/devices/{{deviceID}}" class="card-link">Device Details</a>
@@ -72,7 +73,7 @@
                                         <div class="form-group">
                                             <label class="switch">
                                                 Turn On/Off:
-                                                <input type="checkbox" {{checkValue "on" status}} id="{{taskID}}status">
+                                                <input type="checkbox" id="{{deviceID}}status">
                                                 <span class="slider round"></span>
                                             </label>
                                         </div>
@@ -83,7 +84,7 @@
                                             </label>
                                         </div>
 
-                                        <input type="hidden" name="taskID" value={{taskID}} />
+                                        <input type="hidden" name="deviceID" value={{deviceID}} />
                                 
                                     </form>
                                 
