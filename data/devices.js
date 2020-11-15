@@ -17,6 +17,23 @@ const exportedMethods = {
         const success = await users.saveJSONToFile(filename, data);
 
         return success;
+    },
+
+    async deleteDevice(email, deviceID) {
+        const filename = path.join(__dirname, "datafiles", email+ ".json");
+        const data = await users.getFileAsJSON(filename);
+
+        const devices = data.devices;
+        const newDeviceArray = [];
+        for (device of devices) {
+            if (device.deviceID != deviceID) {
+                newDeviceArray.push(device);
+            }
+        }
+        data.devices = newDeviceArray;
+        const success = await users.saveJSONToFile(filename, data);
+
+        return success;
     }
   };
   
