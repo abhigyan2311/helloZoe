@@ -18,11 +18,11 @@
   "profilePic": "boy.png",
   "rooms": ["living room", "bedroom", "kitchen"],
   "devices": [
-    { "deviceID": "device1", "deviceName": "TV", "settings": {}, "room": "living room", "icon": "tv.svg" },
-    { "deviceID": "device2", "deviceName": "AC", "settings": {}, "room": "living room", "icon": "AC.png" },
-    { "deviceID": "device3", "deviceName": "Vaccum", "settings": {}, "room": "living room", "icon": "vacuum.svg" },
-    { "deviceID": "device4", "deviceName": "Dishwasher", "settings": {}, "room": "kitchen", "icon": "dishwasher.png" },
-    { "deviceID": "device5", "deviceName": "TV", "settings": {}, "room": "bedroom", "icon": "tv.svg" }
+    { "deviceID": "device1", "deviceName": "TV", "settings": {"contrast":"24", "brightness":"50"}, "room": "living room", "icon": "tv.svg" },
+    { "deviceID": "device2", "deviceName": "AC", "settings": {"temperature":"20"}, "room": "living room", "icon": "AC.png" },
+    { "deviceID": "device3", "deviceName": "Vaccum", "settings": {"Speed":"2"}, "room": "living room", "icon": "vacuum.svg" },
+    { "deviceID": "device4", "deviceName": "Dishwasher", "settings": {"Set Timer (in mins)":"28"}, "room": "kitchen", "icon": "dishwasher.png" },
+    { "deviceID": "device5", "deviceName": "TV", "settings": {"contrast":"24", "brightness":"50"}, "room": "bedroom", "icon": "tv.svg" }
   ],
   "notifications": [
     { "name": "Vacuum Cleaner", "icon": "vacuum.svg", "status": true, "timeLeft": "00:35", "battery": "Mid" },
