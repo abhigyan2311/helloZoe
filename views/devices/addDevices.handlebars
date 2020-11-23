@@ -2,13 +2,51 @@
 <br>
 <p class="device-caption">Type in the device name you would like to add below. We will search and check if we can connect to the device.</p>
 
-<form id="form-id">
-    <label class="label-class">
-        Device Name: 
-        <input type="text" name="deviceName">
-    </label>
+<form id="form-id" method="POST" action="/devices/addDevices">
+    <div class="form-group">
+        <label class="label-class">
+            Device Name: 
+            <input type="text" name="deviceName">
+        </label>
+    </div>
+    <div class="form-group">
+        <label class="label-class">Choose A Room To Add Device To:
+            <select id="roomSelection" name="roomSelection" class="form-control">
+                {{#each rooms}}
+                <option value="{{this}}">{{this}}</option>
+                {{/each}}
+            </select>
+        </label>
+    </div>
+
+    <div class="form-group">
+        <label class="label-class">Add A Picture To Identify Device:
+            <br>
+            <input type="file" accept=".png,.jpeg,.svg"/>
+        </label>
+    </div>
+
+    <div class="form-group">
+        <label class="label-class">Tags:</label><br>
+        <label class="form-check form-check-inline label-class">
+            <input class="form-check-input" type="checkbox" name="tags" value="security">
+            <span class="form-check-label">Security</span>
+        </label>
+        <label class="form-check form-check-inline label-class">
+            <input class="form-check-input" type="checkbox" name="tags" value="entertainment">
+            <span class="form-check-label">Entertainment</span>
+        </label>
+        <label class="form-check form-check-inline label-class">
+            <input class="form-check-input" type="checkbox" name="tags" value="appliance">
+            <span class="form-check-label">Appliance</span>
+        </label>
+        <label class="form-check form-check-inline label-class">
+            <input class="form-check-input" type="checkbox" name="tags" value="other">
+            <span class="form-check-label">Other</span>
+        </label>
+    </div>
 </form>
-<button type="submit"  class="btn btn-primary" onclick="searchButtonClick()">Search</button>
+<button type="submit"  class="btn btn-primary" onclick="searchButtonClick()">Search For Device</button>
 
 <br>
 <br>

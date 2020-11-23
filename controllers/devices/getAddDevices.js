@@ -10,7 +10,7 @@ exports.getAddDevicesController = asyncHandler(async (req, res, next) => {
 
   const userData = await users.getUserByEmail(req.session.user.email);
 
-  const devices = userData.devices; // array of devices
+  const rooms = userData.rooms; // array of devices
 
-  return res.render("devices/addDevices", { title: "Add Device" });
+  return res.render("devices/addDevices", { title: "Add Device", rooms: rooms });
 });
