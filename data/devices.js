@@ -11,7 +11,20 @@ const exportedMethods = {
         const lastDeviceID = devices[devices.length-1].deviceID.split("device").join("");
         const newDeviceID = parseInt(lastDeviceID) + 1;
         newDevice.deviceID = `device${newDeviceID}`;
-
+        console.log(newDevice);
+        if(newDevice.deviceName === 'AC'){
+            newDevice.settings['temperature'] = 0;
+        }else {
+            if(newDevice.deviceName === 'TV'){
+                newDevice.settings['Volume'] = 50;
+                newDevice.settings['Contrast'] = 50;
+                newDevice.settings['Brightness'] = 75;
+            } else {
+                if(newDevice.deviceName === 'Vaccum'){
+                    newDevice.settings['Spped'] = 2;
+                }
+            }
+        }
         data.devices.push(newDevice);
 
         const success = await users.saveJSONToFile(filename, data);
