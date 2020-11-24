@@ -16,5 +16,5 @@ exports.roomController = asyncHandler(async (req, res, next) => {
 			roomDevices.push(allDevices[i]);
 		}
 	}
-	return res.render("room/singleRoom", { roomName: roomname, roomDevices: roomDevices, title: roomname });
+	return res.render("room/singleRoom", { roomName: roomname, roomDevices: roomDevices, title: roomname, settings: roomDevices.settings });
 });
