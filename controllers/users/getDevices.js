@@ -14,5 +14,25 @@ exports.getDevicesController = asyncHandler(async (req, res, next) => {
   const userData = await users.getUserByEmail(req.session.user.email);
   const allDevices = userData.devices;
 
-  return res.render("users/devices", { title: "All Devices", allDevices: allDevices});
+  let devicesByRooms = {};
+
+  for (device of allDevices) {
+    if (!devicesByRooms[device.room]) {
+      devicesByRooms[device.room] = [device];
+    } else {
+      devicesByRooms[device.room].push(device);
+    }
+  }
+
+  let devicesByRoomArray = [];
+  for (let key in devicesByRooms) {
+    let newObj = {};
+    newObj["room"] = key;
+    newObj["devices"] = devicesByRooms[key];
+    devicesByRoomArray.push(newObj);
+  }
+
+  // return res.render("users/devices", { title: "All Devices", allDevices: allDevices});
+  return res.render("users/devices", { title: "All Devices", devicesByRoomArray: devicesByRoomArray});
+
 });
