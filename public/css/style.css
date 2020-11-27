@@ -124,3 +124,23 @@ li {
 #li2 a:hover {
   background-color: #111;
 }
+#b6 {
+  background-color: white;
+  color: black;
+}
+#b6:hover {
+  background: linear-gradient(to left, black 50%, white 50%) right;
+  background-size: 200%;
+  transition: 0.5s ease-out;
+  color: white;
+}
+#b7 {
+  background-color: white;
+  color: black;
+}
+#b7:hover {
+  background: linear-gradient(to left, black 50%, white 50%) right;
+  background-size: 200%;
+  transition: 0.5s ease-out;
+  color: white;
+}
