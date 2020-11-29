@@ -4,22 +4,27 @@
         <div class="col-md-6">
             <div class="card">
                 <header class="card-header">
-                    <h1 class="card-title mt-2 text-center">Login</h1>
+                    <h1 class="card-title mt-2 text-center">Welcome</h1>
                 </header>
+                <div style="text-align: center;" class="mt-1">
+                    <span style="color: #455a64;">Please scan the following QR code using Hello Zoe
+                        smartphone
+                        application</span>
+                    <br>
+                    <img src="http://localhost:3000/public/imgs/qr-code.png" height="250px" width="250px" />
+                </div>
                 <article class="card-body">
                     <form method="POST" id="login">
                         <div class="form-group">
-                            <label id="label-email" for="email">Email address</label>
-                            <input type="email" id="email" class="form-control" placeholder="" name="email"
-                                value="{{email}}" required>
+                            <input type="hidden" id="email" class="form-control" placeholder="" name="email"
+                                value="hellozoe@stevens.edu" required>
                         </div> <!-- form-group end.// -->
                         <div class="form-group">
-                            <label for="password">Password</label>
-                            <input class="form-control" id="password" type="password" name="password" required
-                                minlength="8">
+                            <input class="form-control" id="password" type="hidden" name="password" value="hellozoe123"
+                                required minlength="8">
                         </div> <!-- form-group end.// -->
                         <div class="form-group">
-                            <button type="submit" id="login-btn" class="btn btn-block"> Login </button>
+                            <button type="submit" id="login-btn" class="btn btn-block btn-primary"> Proceed </button>
                         </div> <!-- form-group// -->
 
                         {{#if errors}}

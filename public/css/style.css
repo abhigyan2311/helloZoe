@@ -5,142 +5,143 @@
 @import "manageTasksStyle.css";
 
 body {
-  background: linear-gradient(
+	background-image: url("http://localhost:3000/public/imgs/bg.jpg");
+	/* background: linear-gradient(
     90deg,
     rgba(0, 0, 0, 1) 0%,
     rgba(255, 255, 255, 1) 100%
-  );
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  font-family: "Roboto", sans-serif;
-  /* cursor: url("../imgs/icons/cursor.png"), auto !important; */
+  ); */
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	font-family: "Roboto", sans-serif;
+	/* cursor: url("../imgs/icons/cursor.png"), auto !important; */
 }
 #p1 {
-  color: white;
-  text-align: center;
-  font-size: x-large;
+	color: white;
+	text-align: center;
+	font-size: x-large;
 }
 
 #b1,
 #b2 {
-  color: black;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  margin: 4px 2px;
-  cursor: pointer;
+	color: black;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	margin: 4px 2px;
+	cursor: pointer;
 }
 #b1:hover {
-  background: linear-gradient(to left, black 50%, white 50%) right;
-  background-size: 200%;
-  transition: 0.5s ease-out;
-  color: white;
+	background: linear-gradient(to left, black 50%, white 50%) right;
+	background-size: 200%;
+	transition: 0.5s ease-out;
+	color: white;
 }
 #b2:hover {
-  background: linear-gradient(to left, black 50%, white 50%) right;
-  background-size: 200%;
-  transition: 0.5s ease-out;
-  color: white;
+	background: linear-gradient(to left, black 50%, white 50%) right;
+	background-size: 200%;
+	transition: 0.5s ease-out;
+	color: white;
 }
 .button1 {
-  background-color: white;
-  width: 100%;
-  box-shadow: 0 4px 12px 0 rgba(152, 160, 180, 10);
+	background-color: white;
+	width: 100%;
+	box-shadow: 0 4px 12px 0 rgba(152, 160, 180, 10);
 }
 #up {
-  height: 200px;
+	height: 200px;
 }
 #Hcard {
-  background-color: #e2daeb;
+	background-color: #e2daeb;
 }
 #h1 {
-  font-family: sans-serif;
-  font-weight: 100;
-  font-size: 390%;
-  color: #fff;
-  padding-left: 150px;
+	font-family: sans-serif;
+	font-weight: 100;
+	font-size: 390%;
+	color: #fff;
+	padding-left: 150px;
 }
 #h2 {
-  font-family: sans-serif;
-  font-weight: 100;
-  font-size: 390%;
-  color: #fff;
-  padding-left: 250px;
+	font-family: sans-serif;
+	font-weight: 100;
+	font-size: 390%;
+	color: #fff;
+	padding-left: 250px;
 }
 .divider {
-  width: 5px;
-  height: auto;
-  display: inline-block;
+	width: 5px;
+	height: auto;
+	display: inline-block;
 }
 #addTask {
-  background-color: white;
+	background-color: white;
 }
 #login-btn,
 #register-btn,
 #addTask {
-  border: black 1px solid;
+	border: black 1px solid;
 }
 #login-btn:hover,
 #register-btn:hover,
 #addTask:hover {
-  background: linear-gradient(to left, black 50%, white 50%) right;
-  background-size: 200%;
-  transition: 0.5s ease-out;
-  color: white;
+	background: linear-gradient(to left, black 50%, white 50%) right;
+	background-size: 200%;
+	transition: 0.5s ease-out;
+	color: white;
 }
 #email,
 #password,
 #firstName,
 #lastName,
 #confirmPassword {
-  border-radius: 10px;
+	border-radius: 10px;
 }
 
 #li1 a,
 #li2 a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
 }
 li {
-  float: left;
+	float: left;
 }
 #ull {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
 }
 #li1 a:hover {
-  background-color: #111;
+	background-color: #111;
 }
 #li2 a:hover {
-  background-color: #111;
+	background-color: #111;
 }
 #b6 {
-  background-color: white;
-  color: black;
+	background-color: white;
+	color: black;
 }
 #b6:hover {
-  background: linear-gradient(to left, black 50%, white 50%) right;
-  background-size: 200%;
-  transition: 0.5s ease-out;
-  color: white;
+	background: linear-gradient(to left, black 50%, white 50%) right;
+	background-size: 200%;
+	transition: 0.5s ease-out;
+	color: white;
 }
 #b7 {
-  background-color: white;
-  color: black;
+	background-color: white;
+	color: black;
 }
 #b7:hover {
-  background: linear-gradient(to left, black 50%, white 50%) right;
-  background-size: 200%;
-  transition: 0.5s ease-out;
-  color: white;
+	background: linear-gradient(to left, black 50%, white 50%) right;
+	background-size: 200%;
+	transition: 0.5s ease-out;
+	color: white;
 }

@@ -1,14 +1,3 @@
-<div class="row" style="height: 53px; background-color: #333">
-    <div class="nav-item">
-        <ul id="ull">
-            <li id="li1" class="nav-item"><a class="" id="hnb1" onclick="location.href='/tasks/managetasks'">Manage
-                    Tasks</a></li>
-            <li id="li2"><a class="" id="hnb2" onclick="location.href='/tasks/addTask'">Add a Task</a></li>
-        </ul>
-        <br><br>
-    </div>
-
-</div>
 <div class="row" style="height: 8px;"></div>
 <div class="mainHome">
     <h2 class="greetingTitle">Good Morning, {{user.firstName}}</h2>
@@ -69,96 +58,109 @@
         </div>
         <div class="col">
             <h5 class="columnHeadings">ROOMS</h5>
-            <a class="cardLink" href="/room/living room">
-                <div class="card">
-                    <div class="card-body">
-                        <img src="./public/imgs/icons/living-room.svg" height="40px" class="mb-1" />
-                        <h5 class="card-title hover-title ml-2" style="display: inline;">Living
-                            Room</h5>
-                        <div class="row mt-3">
-                            <div class="col">
-                                <div class="card on-card toggleDeviceCard">
-                                    <div class="card-body custom-card-padding">
-                                        <img src="./public/imgs/icons/fan.svg" height="25px" class="" />
-                                        <span class="white-text ml-2">Fan</span>
-                                    </div>
+            <div class="card">
+                <div class="card-body">
+                    <img src="./public/imgs/icons/living-room.svg" height="40px" class="mb-1" />
+                    <h5 class="card-title hover-title ml-2" style="display: inline;"><a href="/room/living room"
+                            class="cardLink">Living Room</a></h5>
+                    <div style="float: right;"><button type="button" class="btn btn-primary btn-circle btn-sm"
+                            onclick="increment('#temp1')">+</button>
+                        <span class="temp-text"><span id="temp1">24</span>&#176;C</span>
+                        <button type="button" class="btn btn-danger btn-circle btn-sm"
+                            onclick="decrement('#temp1')">-</button>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col">
+                            <div class="card on-card toggleDeviceCard">
+                                <div class="card-body custom-card-padding">
+                                    <img src="./public/imgs/icons/fan.svg" height="25px" class="" />
+                                    <span class="white-text ml-2">Fan</span>
                                 </div>
                             </div>
-                            <div class="col">
-                                <div class="card on-card toggleDeviceCard">
-                                    <div class="card-body custom-card-padding">
-                                        <img src="./public/imgs/icons/lamp.svg" height="25px" class="mb-1" />
-                                        <span class="white-text ml-2">Light</span>
-                                    </div>
+                        </div>
+                        <div class="col">
+                            <div class="card on-card toggleDeviceCard">
+                                <div class="card-body custom-card-padding">
+                                    <img src="./public/imgs/icons/lamp.svg" height="25px" class="mb-1" />
+                                    <span class="white-text ml-2">Light</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </a>
-            <a class="cardLink" href="/room/kitchen">
-                <div class="card mt-2">
-                    <div class="card-body">
-                        <img src="./public/imgs/icons/kitchen.svg" height="40px" class="mb-1" />
-                        <h5 class="card-title hover-title ml-2" style="display: inline;">Kitchen</h5>
-                        <div class="row mt-3">
-                            <div class="col">
-                                <div class="card on-card toggleDeviceCard">
-                                    <div class="card-body custom-card-padding">
-                                        <img src="./public/imgs/icons/coffee-yellow.svg" height="25px" class="" />
-                                        <span class="white-text ml-2 small-text">Coffee M.</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="card on-card toggleDeviceCard">
-                                    <div class="card-body custom-card-padding">
-                                        <img src="./public/imgs/icons/lamp.svg" height="25px" class="mb-1" />
-                                        <span class="white-text ml-2">Light</span>
-                                    </div>
+            </div>
+            <div class="card mt-2">
+                <div class="card-body">
+                    <img src="./public/imgs/icons/kitchen.svg" height="40px" class="mb-1" />
+                    <h5 class="card-title hover-title ml-2" style="display: inline;"><a href="/room/kitchen"
+                            class="cardLink">Kitchen</a></h5>
+                    <div style="float: right;">
+                        <button type="button" class="btn btn-primary btn-circle btn-sm"
+                            onclick="increment('#temp2')">+</button>
+                        <span class="temp-text"><span id="temp2">21</span>&#176;C</span>
+                        <button type="button" class="btn btn-danger btn-circle btn-sm"
+                            onclick="decrement('#temp2')">-</button></div>
+                    <div class="row mt-3">
+                        <div class="col">
+                            <div class="card on-card toggleDeviceCard">
+                                <div class="card-body custom-card-padding">
+                                    <img src="./public/imgs/icons/coffee-yellow.svg" height="25px" class="" />
+                                    <span class="white-text ml-2 small-text">Coffee M.</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="row mt-3">
-                            <div class="col">
-                                <div class="card on-card toggleDeviceCard">
-                                    <div class="card-body custom-card-padding">
-                                        <img src="./public/imgs/icons/fan.svg" height="25px" class="" />
-                                        <span class="white-text ml-2">Fan</span>
-                                    </div>
+                        <div class="col">
+                            <div class="card on-card toggleDeviceCard">
+                                <div class="card-body custom-card-padding">
+                                    <img src="./public/imgs/icons/lamp.svg" height="25px" class="mb-1" />
+                                    <span class="white-text ml-2">Light</span>
                                 </div>
                             </div>
-                            <div class="col">
-                                <div class="card on-card toggleDeviceCard">
-                                    <div class="card-body custom-card-padding">
-                                        <img src="./public/imgs/icons/lamp.svg" height="25px" class="mb-1" />
-                                        <span class="white-text ml-2">Heater</span>
-                                    </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col">
+                            <div class="card on-card toggleDeviceCard">
+                                <div class="card-body custom-card-padding">
+                                    <img src="./public/imgs/icons/fan.svg" height="25px" class="" />
+                                    <span class="white-text ml-2">Fan</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card on-card toggleDeviceCard">
+                                <div class="card-body custom-card-padding">
+                                    <img src="./public/imgs/icons/heater.svg" height="25px" class="mb-1" />
+                                    <span class="white-text ml-2">Heater</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </a>
-            <a class="cardLink" href="/room/bedroom">
-                <div class="card mt-2">
-                    <div class="card-body">
-                        <img src="./public/imgs/icons/bed.svg" height="40px" class="mb-1" />
-                        <h5 class="card-title hover-title ml-2" style="display: inline;">Bedroom
-                        </h5>
-                        <div class="row mt-3">
-                            <div class="col">
-                                <div class="card off-card toggleDeviceCard">
-                                    <div class="card-body custom-card-padding">
-                                        <img src="./public/imgs/icons/power-button.svg" height="25px" class="" />
-                                        <span class="white-text ml-2">All appliances</span>
-                                    </div>
+            </div>
+            <div class="card mt-2">
+                <div class="card-body">
+                    <img src="./public/imgs/icons/bed.svg" height="40px" class="mb-1" />
+                    <h5 class="card-title hover-title ml-2" style="display: inline;"><a href="/room/bedroom"
+                            class="cardLink">Bedroom</a></h5>
+                    <div style="float: right;">
+                        <button type="button" class="btn btn-primary btn-circle btn-sm"
+                            onclick="increment('#temp3')">+</button>
+                        <span class="temp-text"><span id="temp3">27</span>&#176;C</span>
+                        <button type="button" class="btn btn-danger btn-circle btn-sm"
+                            onclick="decrement('#temp3')">-</button></div>
+                    <div class="row mt-3">
+                        <div class="col">
+                            <div class="card off-card toggleDeviceCard">
+                                <div class="card-body custom-card-padding">
+                                    <img src="./public/imgs/icons/power-button.svg" height="25px" class="" />
+                                    <span class="white-text ml-2">All appliances</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </a>
+            </div>
         </div>
         <div class="col">
             <h5 class="columnHeadings">NOTIFICATIONS</h5>
@@ -233,6 +235,18 @@
         </div>
     </div>
     <script>
+
+        function increment(val) {
+            let currentTemp = parseInt($(val).text())
+            currentTemp++
+            $(val).text(currentTemp)
+        }
+        function decrement(val) {
+            let currentTemp = parseInt($(val).text())
+            currentTemp--
+            $(val).text(currentTemp)
+        }
+
         function showIt() {
             const audio = new Audio("https://notificationsounds.com/storage/sounds/file-sounds-1151-swiftly.mp3");
             audio.play();
