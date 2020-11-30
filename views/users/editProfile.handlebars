@@ -10,23 +10,11 @@
                     alt="avatar">
 
                 {{/if}}
-                <form action="/users/changeuserpic" method="POST" enctype="multipart/form-data">
-                    <div class="form-group">
-                        <label for="image">Upload a different photo</label>
-                        <input type="file" class="form-control-file" name="image" id="image" accept="image/*" />
-                    </div>
-                    <div>
-                        <button type="submit" class="btn btn-primary">Upload</button>
-                    </div>
-                </form>
+                
             </div>
         </div>
         <div class="col-sm-6">
-            <ul class="nav nav-tabs">
-                
-                <li class="nav-item"><a href="#profile" data-toggle="tab" class="nav-link active">Profile </a></li>
-                
-            </ul>
+         
             <div id="myTabContent" class="tab-content">
                 <div {{#if displayProfile}} class="tab-pane fade show active" {{else}} class="tab-pane fade"
                     {{/if}}id="profile">
