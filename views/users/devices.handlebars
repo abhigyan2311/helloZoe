@@ -2,116 +2,140 @@
     <div>
         <h1 class="device-title">Your Devices</h1>
     </div>
-    <a class="card deviceBox addDevice" style="width: 18rem;" href="/devices/addDevices">
-        <div class="card-body">
-            <h6 class="card-title">+ Add New Device</h6>
-            <p class="card-text">Click to connect a new device</p>
+    
+    <div class="container">
+        <div class="row">
+           <nav class="navbar navbar-expand-lg navbar-light ml-3">
+               <form class="form-inline my-2 my-lg-0" action="/devices/searchDevices" method="POST" id="form-search-device">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="searchTerm">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                </form>
+
+                <a class="nav-link" href="/users/devices">All Devices</a>
+           </nav>
         </div>
-    </a>
-    {{#each devicesByRoomArray}}
-    <div class="roomBox">
-        <h5 class="columnHeadings">{{room}}</h5>
-        <div class="deviceLayout">
 
-            {{#each devices}}
-                <div class="card deviceBox" style="width: 18rem;">
-                    <div class="card-body">
-                        <div class="titleAndImage">
-                            {{!-- <label class="switch">
-                                <input type="checkbox" id="{{deviceID}}status">
-                                <span class="slider round"></span>
-                            </label> --}}
-                            <img src="/public/imgs/icons/{{icon}}" class="deviceImg" alt="{{deviceName}}">
-                            <h5 class="card-title">{{deviceName}}</h5>
-                        </div>
-                        <p class="card-text">Room: {{room}}</p>
-                        <p class="card-text">Tags: {{tags}}</p>
-                    {{!-- </div>
-                    <div class="card-body"> --}}
-                        <label for="device-{{@index}}" class="hidden">Edit Task</label>
-                        <button id="device-{{@index}}" type="button" class="btn btn-primary" data-toggle="modal"
-                            data-target="#edit-device{{@index}}"><i class="fa fa-edit"></i></button>
+        <div class="row">
+            <div class="col col-12 col-sm-2 col-md-2 col-lg-2">
+                <nav class="nav flex-column mt-3">            
+                    {{#each devicesByRoomArray}}            
+                        <a class="nav-link" href="#{{room}}">{{room}}</a>
+                    {{/each}}           
+                </nav>
+            </div>
 
-                        <label for="del-{{@index}}" class="hidden">Delete Task</label>
-                        <button id="del-{{@index}}" type="button" class="btn btn-danger" data-toggle="modal"
-                            data-target="#del-device{{@index}}"><i class="fa fa-trash"></i>
-                        </button>
-                        <span class = "right">
-                            <label class="switch">
-                                <input type="checkbox" checked id="{{deviceID}}status">
-                                <span class="slider round"></span>
-                            </label>
-                        </span>
+            <div class="col col-12 col-sm-5 col-md-5 col-lg-5 mt-3">
+                {{#each devicesByRoomArray}}
+                <div class="row">
+                    <div class="roomBox" id="{{room}}">
+                    <h5 class="columnHeadings">{{room}}</h5>
+                    <div class="deviceLayout">
 
-                        <!-- Modal -->
-                        <div class="modal fade" id="del-device{{@index}}" tabindex="-1" role="dialog">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h2 class="modal-title">Delete Device</h2>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
+                        {{#each devices}}
+                            <div class="card deviceBox" style="width: 18rem;">
+                                <div class="card-body">
+                                    <div class="titleAndImage">
+                                        {{!-- <label class="switch">
+                                            <input type="checkbox" id="{{deviceID}}status">
+                                            <span class="slider round"></span>
+                                        </label> --}}
+                                        <img src="/public/imgs/icons/{{icon}}" class="deviceImg" alt="{{deviceName}}">
+                                        <h5 class="card-title">{{deviceName}}</h5>
                                     </div>
-                                    <div class="modal-body">
-                                        Are you sure you want to delete this device?
+                                    <p class="card-text">Room: {{room}}</p>
+                                    <p class="card-text">Tags: {{tags}}</p>
+                                {{!-- </div>
+                                <div class="card-body"> --}}
+                                    <label for="device-{{@index}}" class="hidden">Edit Task</label>
+                                    <button id="device-{{@index}}" type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#edit-device{{@index}}"><i class="fas fa-cog"></i></button>
+
+                                    <label for="del-{{@index}}" class="hidden">Delete Task</label>
+                                    <button id="del-{{@index}}" type="button" class="btn btn-danger" data-toggle="modal"
+                                        data-target="#del-device{{@index}}"><i class="fa fa-trash"></i>
+                                    </button>
+                                    <span class = "right">
+                                        <label class="switch">
+                                            <input type="checkbox" checked id="{{deviceID}}status">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </span>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="del-device{{@index}}" tabindex="-1" role="dialog">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h2 class="modal-title">Delete Device</h2>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Are you sure you want to delete this device?
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                                    <form action="/devices/delete/{{deviceID}}" method="POST">
+                                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                        <form action="/devices/delete/{{deviceID}}" method="POST">
-                                            <button type="submit" class="btn btn-danger">Delete</button>
-                                        </form>
+                                     <div class="modal fade" id="edit-device{{@index}}" tabindex="-1" role="dialog">
+                                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h2 class="modal-title">Settings</h2>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form action="/devices/updateDevices" method="POST">
+
+                                                        <div class="form-group">
+                                                            <label for="title">Device Name</label>
+                                                            <input type="text" name="title" id="title{{@index}}" value="{{deviceName}}">
+                                                        </div>
+                                                        {{#each settings}}
+                                                        <div>
+                                                            <label for="{{@key}}">{{@key}}</label>
+                                                            <input type="number" name="{{@key}}" value="{{this}}" min="0" max="100">
+                                                        </div>
+                                                        {{/each}}
+
+                                                        <input type="hidden" name="deviceID" value={{deviceID}} />
+                                                        <button type="submit" class="btn btn-danger">Save</button>
+                                                    </form>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="modal fade" id="edit-device{{@index}}" tabindex="-1" role="dialog">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h2 class="modal-title">Edit {{deviceName}} in {{room}}</h2>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form action="/tasks/editTask" method="POST" id="edit-form">
-
-                                            <div class="form-group">
-                                                <label class="switch">
-                                                    Turn On/Off:
-                                                    <input type="checkbox" id="{{deviceID}}status">
-                                                    <span class="slider round"></span>
-                                                </label>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="device">Device
-                                                    <input type="text" readonly class="form-control-plaintext"
-                                                        name="deviceName" id="deviceid{{@index}}" value="{{deviceName}}">
-                                                </label>
-                                            </div>
-
-                                            <input type="hidden" name="deviceID" value={{deviceID}} />
-                                    
-                                        </form>
-                                    
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="submit" class="btn btn-primary" for="edit-form">Save</button>
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                        {{!-- <form action="/devices/delete/{{deviceID}}" method="POST">
-                                            <button type="submit" class="btn btn-danger">Delete</button>
-                                        </form> --}}
-                                    </div>
-                                </div>
-                            </div>
+                        {{!-- </a> --}}
+                        {{/each}}
                         </div>
                     </div>
                 </div>
-            {{!-- </a> --}}
-            {{/each}}
+                {{/each}}
+            </div>
+
+            <div class="col col-12 col-sm-5 col-md-5 col-lg-5">
+                <div class="row">
+                    <a class="card deviceBox addDevice" style="width: 18rem;" href="/devices/addDevices">
+                        <div class="card-body">
+                            <h6 class="card-title">+ Add New Device</h6>
+                            <p class="card-text">Click to connect a new device</p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
-        {{/each}}
+    </div>
 </div>
