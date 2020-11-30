@@ -1,8 +1,12 @@
 <div class="task-container">
     <div class="row">
-        <h1 id="h2">Manage Your Tasks</h1>
-    </div>
-    <table class="table table-striped">
+        <h2 class="taskHeading">Tasks</h2>
+        <form action="/tasks/addTask" method="get" style="margin-left:auto">
+            <button type="submit" class="btn btn-circle1 btn-primary">+</button>
+        </form>
+
+    </div><br>
+    <table class="table table-striped table-hover text-center">
         <thead class="thead-dark">
             <tr>
                 <th scope="col">Task</th>
@@ -11,13 +15,14 @@
                 <th scope="col">Frequency</th>
                 <th scope="col">Date Range</th>
                 <th scope="col">Status</th>
+                <th scope="col"></th>
 
             </tr>
         </thead>
         <tbody>
             {{#each tasks}}
             <tr>
-                <td>{{title}}</td>
+                <td><b>{{title}}</b></td>
                 <td>{{deviceName}}</td>
                 <td>{{time.from}} {{#if time.to}} - {{time.to}} {{/if}}</td>
                 <td>
@@ -79,17 +84,17 @@
                                     <form action="/tasks/editTask" method="POST">
 
                                         <div class="form-group">
-                                            <label for="title">Task Description</label>
+                                            <label for="title"><b>Task Name: </b></label>
                                             <input type="text" name="title" id="title{{@index}}" value="{{title}}">
                                         </div>
                                         <div class="form-group">
-                                            <label for="device">Device
-                                                <input type="text" readonly class="form-control-plaintext"
-                                                    name="deviceName" id="deviceid{{@index}}" value="{{deviceName}}">
-                                            </label>
+                                            <label for="device"><b>Device:</b></label>
+                                            <input type="text" readonly name="deviceName" id="deviceid{{@index}}"
+                                                value="{{deviceName}}">
+
                                         </div>
                                         <div class="form-group">
-                                            <label>Frequency</label><br>
+                                            <label><b>Frequency</b></label><br>
                                             <label class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" name="frequency"
                                                     value="Monday" {{checkInArray "Monday" frequency}}>
@@ -132,7 +137,7 @@
                                             </label>
                                         </div>
                                         <div class="form-group">
-                                            <label>Date Range </label><br>
+                                            <label><b>Date Range</b> </label><br>
                                             <label>From
                                                 <input type="date" id='datefrom' name="datefrom"
                                                     value={{dateFormat date.from "YYYY-MM-DD" true}}></label>
@@ -147,7 +152,7 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label>Time</label><br>
+                                            <label><b>Time</b></label><br>
                                             <label>From
                                                 <input type="time" id='timefrom' name="timefrom"
                                                     value={{time.from}}></label>
@@ -164,20 +169,17 @@
                                             <label class="form-check form-check-inline">
                                                 <input class="form-check-input" type="radio" name="status" value="on"
                                                     {{checkValue "on" status}}>
-                                                <span class="form-check-label"> on</span>
+                                                <span class="form-check-label"> ON</span>
                                             </label>
                                             <label class="form-check form-check-inline">
                                                 <input class="form-check-input" type="radio" name="status" value="off"
                                                     {{checkValue "off" status}}>
-                                                <span class="form-check-label"> off</span>
+                                                <span class="form-check-label"> OFF</span>
                                             </label>
                                         </div>
                                         <input type="hidden" name="taskID" value={{taskID}} />
                                         <button type="submit" class="btn btn-danger">Save</button>
                                     </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                                 </div>
                             </div>
                         </div>
@@ -188,9 +190,4 @@
             {{/each}}
         </tbody>
     </table>
-</div>
-<div>
-    <form action="/tasks/addTask" method="get">
-        <button id="addTask" type="submit" class="btn">Add New Task</button>
-    </form>
 </div>
