@@ -8,10 +8,21 @@
            <nav class="navbar navbar-expand-lg navbar-light ml-3">
                <form class="form-inline my-2 my-lg-0" action="/devices/searchDevices" method="POST" id="form-search-device">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="searchTerm">
-                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
                 </form>
 
                 <a class="nav-link" href="/users/devices">All Devices</a>
+                
+                <form action="/devices/searchDevices" method="POST" id="entertainment">
+                <input class="form-control mr-sm-2" type="hidden" name="searchTerm" value="entertainment">
+                <button class="btn nav-link" type="submit">#entertainment</button>
+                </form>
+
+                <form action="/devices/searchDevices" method="POST" id="appliance">
+                <input class="form-control mr-sm-2" type="hidden" name="searchTerm" value="appliance">
+                <button class="btn nav-link" type="submit">#appliance</button>
+                </form>
+                
            </nav>
         </div>
 
