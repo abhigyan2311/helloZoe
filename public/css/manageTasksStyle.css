@@ -8,6 +8,10 @@
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
+.addTaskCard {
+	color: black;
+}
+
 .taskHeading {
 	margin-left: 15px;
 	font-weight: 400;
@@ -21,10 +25,6 @@
 	border-radius: 25px;
 	font-size: 18px;
 	text-align: center;
-}
-
-input:checked + .slider {
-	background-color: #00918e !important;
 }
 
 .table {
