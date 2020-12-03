@@ -8,6 +8,10 @@
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
+.addTaskCard {
+	color: black;
+}
+
 .taskHeading {
 	margin-left: 15px;
 	font-weight: 400;
