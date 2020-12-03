@@ -6,17 +6,23 @@
 
 body {
 	background-image: url("http://localhost:3000/public/imgs/bg.jpg");
-	/* background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(255, 255, 255, 1) 100%
-  ); */
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 	font-family: "Roboto", sans-serif;
-	/* cursor: url("../imgs/icons/cursor.png"), auto !important; */
+}
+
+body::-webkit-scrollbar {
+	background-color: #060a0e;
+	width: 6px;
+	height: 6px;
+}
+
+body::-webkit-scrollbar-thumb {
+	border-width: 0px;
+	background: #ff4655;
+	border-radius: 2px;
 }
 
 .high-contrast {
