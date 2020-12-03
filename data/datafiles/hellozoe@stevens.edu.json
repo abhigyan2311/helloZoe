@@ -31,7 +31,7 @@
                 "Brightness": 75
             },
             "room": "living room",
-            "icon": "tv.svg"
+            "icon": "television.svg"
         },
         {
             "deviceID": "device2",
@@ -40,7 +40,7 @@
                 "temperature": "20"
             },
             "room": "bedroom",
-            "icon": "AC.png",
+            "icon": "air-conditioner.svg",
             "tags": [
                 "appliance"
             ]
@@ -53,7 +53,7 @@
                 "Timer": 30
             },
             "room": "kitchen",
-            "icon": "dishwasher.png",
+            "icon": "dishwasher.svg",
             "tags": [
                 "appliance"
             ]

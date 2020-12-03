@@ -56,8 +56,12 @@
 }
 
 .deviceImg {
-	height: 30px;
+	height: 40px;
 	margin-left: auto;
+}
+
+input:checked + .slider {
+	background-color: #54e346 !important;
 }
 
 .delete {

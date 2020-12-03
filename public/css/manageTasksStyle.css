@@ -23,10 +23,6 @@
 	text-align: center;
 }
 
-input:checked + .slider {
-	background-color: #00918e !important;
-}
-
 .table {
 	background-color: white;
 }
