@@ -44,6 +44,14 @@
 	opacity: 0.9;
 }
 
+.modal-title {
+	color: black;
+}
+
+.modal-body {
+	color: black;
+}
+
 .deviceLayout {
 	display: flex;
 	flex-wrap: wrap;
@@ -73,13 +81,11 @@ input:checked + .slider {
 }
 
 .label-class {
-	color: whitesmoke;
 	font-weight: 400;
 	text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
 }
 
 .device-caption {
-	color: whitesmoke;
 	font-weight: 400;
 	text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
 }
@@ -91,10 +97,6 @@ input:checked + .slider {
 	border-radius: 8px;
 	border-color: lightgreen;
 	border-style: solid;
-}
-
-.device-tableheader {
-	color: white;
 }
 
 .titleAndImage {
@@ -114,7 +116,6 @@ input:checked + .slider {
 .nav-link {
 	font-weight: 400;
 	font-size: 16px;
-	color: white;
 	text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
 }
 
