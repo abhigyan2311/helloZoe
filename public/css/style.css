@@ -18,6 +18,24 @@ body {
 	font-family: "Roboto", sans-serif;
 	/* cursor: url("../imgs/icons/cursor.png"), auto !important; */
 }
+
+.high-contrast {
+	background-color: white !important;
+	color: black !important;
+	font-weight: bold;
+	text-shadow: none !important;
+}
+
+.high-contrast-bg {
+	background: none !important;
+	background-color: black !important;
+}
+
+.high-contrast-button {
+	display: none;
+	background-color: green;
+}
+
 #p1 {
 	color: white;
 	text-align: center;

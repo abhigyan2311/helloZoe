@@ -17,6 +17,23 @@
 
         {{#if session.user}}
         <div class="nav-item mr-3">
+            <a id="highContrastButton">
+                <div class="card circleCard low-contrast-button" data-toggle="tooltip" data-placement="bottom"
+                    title="High Contrast Mode">
+                    <div class="card-body">
+                        <img src="http://localhost:3000/public/imgs/icons/eyeglasses.svg" height="23px" />
+                    </div>
+                </div>
+                <div class="card circleCard high-contrast-button" data-toggle="tooltip" data-placement="bottom"
+                    title="High Contrast Mode">
+                    <div class="card-body">
+                        <img src="http://localhost:3000/public/imgs/icons/eyeglasses-white.svg" height="23px" />
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="nav-item mr-3">
             <a href="/users/devices">
                 <div class="card circleCard" data-toggle="tooltip" data-placement="bottom" title="Devices">
                     <div class="card-body">
@@ -51,7 +68,6 @@
             </li>
         </ul>
         {{/if}}
-
 
     </div>
 </nav>

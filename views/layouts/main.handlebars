@@ -38,11 +38,14 @@
         });
         $(".toggleDeviceCard").click(function (e) {
             e.preventDefault();
-            /*--
-            const audio = new Audio("https://notificationsounds.com/storage/sounds/file-sounds-729-i-demand-attention.mp3");
-            audio.play();
-            --*/
             $(this).toggleClass("on-card off-card");
+        });
+        $("#highContrastButton").click(function (e) {
+            e.preventDefault();
+            $(".greetingTitle, .columnHeadings").toggleClass("high-contrast");
+            $("body").toggleClass("high-contrast-bg");
+            $(".high-contrast-button").toggle();
+            $(".low-contrast-button").toggle();
         });
     </script>
 </body>
