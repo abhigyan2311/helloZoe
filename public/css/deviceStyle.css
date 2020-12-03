@@ -1,100 +1,120 @@
 .device-title {
-  color: whitesmoke;
-  font-weight: 400;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+	color: #455a64;
+	font-weight: 400;
+	font-size: 35px;
+	margin-left: 10px;
+}
+
+.sidebar-title {
+	color: #455a64;
+}
+
+.sidebar-col {
+	border-left: 6px solid #f50057 !important;
+}
+
+.list-group-item:hover {
+	background-color: #f50057 !important;
+	color: #fff;
+}
+
+.card {
+	color: white;
+}
+.card-title {
+	color: white;
+}
+.card-text {
+	margin-bottom: 2px !important;
 }
 
 .addDevice {
-  width: 30%;
-  background-color: lightgray;
-  opacity: 0.8;
-  font-size: 15px;
-  border-radius: 30px;
+	width: 30%;
+	background-color: lightgray;
+	opacity: 0.8;
+	font-size: 15px;
+	border-radius: 30px;
 }
 
 .addDevice:hover {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 .addDevice:hover {
-  opacity: 0.9;
+	opacity: 0.9;
 }
 
 .deviceLayout {
-  display: flex;
-  flex-wrap: wrap;
-  margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto;
 }
 
 .deviceBox {
-  width: 100%;
-  margin: 20px;
+	width: 100%;
+	background-color: #153e90;
 }
 
 .deviceImg {
-  height: 50px;
-  width: 20%;
-  margin-bottom: 10px;
-  margin-right: 20px;
+	height: 30px;
+	margin-left: auto;
 }
 
 .delete {
-  color: red;
+	color: red;
 }
 
 .delete:hover {
-  color: darkred;
+	color: darkred;
 }
 
 .label-class {
-  color: whitesmoke;
-  font-weight: 400;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+	color: whitesmoke;
+	font-weight: 400;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
 }
 
 .device-caption {
-  color: whitesmoke;
-  font-weight: 400;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+	color: whitesmoke;
+	font-weight: 400;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
 }
 
 #add-popup {
-  background-color: whitesmoke;
-  width: 30%;
-  padding: 10px;
-  border-radius: 8px;
-  border-color: lightgreen;
-  border-style: solid;
+	background-color: whitesmoke;
+	width: 30%;
+	padding: 10px;
+	border-radius: 8px;
+	border-color: lightgreen;
+	border-style: solid;
 }
 
 .device-tableheader {
-  color: white;
+	color: white;
 }
 
 .titleAndImage {
-  display: flex;
-  border-bottom: 3px solid black;
-  margin-bottom: 15px;
+	display: flex;
 }
 
 .right {
-  float: right;
+	float: right;
 }
 
 .nav {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .nav-link {
-  font-weight: 400;
-  font-size: 16px;
-  color: white;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+	font-weight: 400;
+	font-size: 16px;
+	color: white;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
 }
 
 .nav-link:hover {
-  color: darkgrey;
-  font-weight: bold;
+	color: darkgrey;
+	font-weight: bold;
 }
