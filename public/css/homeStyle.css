@@ -57,7 +57,7 @@
 }
 
 .on-card {
-	background-color: #00918e;
+	background-color: #008482;
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 	height: 50px;
 }
@@ -82,7 +82,7 @@
 .notifSubTitle {
 	font-size: 21px;
 	font-weight: 400;
-	color: #7d8c93;
+	color: #677982;
 }
 
 .running:before {
