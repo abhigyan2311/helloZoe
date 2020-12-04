@@ -1,4 +1,4 @@
-# helloZoe
+# Hello Zoe
 CS 545: Human Computer Interaction - Smart Home Solution
 
 ## Running the Website
@@ -23,5 +23,5 @@ node app.js
 ## Step 3:
 You can now access the web application in your browser by navigating to:
 ```
-localhost:3000
+http://localhost:3000
 ```
