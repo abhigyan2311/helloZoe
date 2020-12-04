@@ -15,7 +15,7 @@ Use the command below to run the web application:
 npm start
 ```
 
-If the command "npm start" does not work, try the following command:
+For some reason, if the command "npm start" does not work, try the following command:
 ```
 node app.js
 ```
