@@ -162,3 +162,11 @@ li {
 	transition: 0.5s ease-out;
 	color: white;
 }
+
+.btn-primary{
+	background-color:#0072ee !important;
+}
+
+.btn-outline-success{
+	color: #008a00;
+}
