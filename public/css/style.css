@@ -163,6 +163,17 @@ li {
 	color: white;
 }
 
+#back-to-all-task {
+	background-color: white;
+	color: black;
+}
+#back-to-all-task:hover {
+	background: linear-gradient(to left, black 50%, white 50%) right;
+	background-size: 200%;
+	transition: 0.5s ease-out;
+	color: white;
+}
+
 .btn-primary{
 	background-color:#0072ee !important;
 }
